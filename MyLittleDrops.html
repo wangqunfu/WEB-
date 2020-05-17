@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" name="viewport" content="width=device-width,initial-scale=1,user-scalable=no" >
+    <title>华杉科技（王群富)</title>
+    <link rel="short icon" href="Resources/icon.png">
+    <link rel="stylesheet" href="ExtenalStyle.css">
+    <style>
+        .MD_bg_img{
+            width: 100%;
+        }
+        .MD_exteral_div{
+            position: relative;
+        }
+        .MD_inner_div{
+            left: 50%;
+            top: 50%;
+            width: 66px;
+            height:120px;
+            margin-left: -33px;
+            margin-top: -60px;
+            position: absolute;
+            text-align: center;
+        }
+        .MD_inner_div span{
+            display: inline-block;
+        }
+        .MD_inner_div button{
+            background: rgb(32,131,204);
+            width: 66px;
+            height: 20px;
+        }
+       .MD_bottom_div{
+           width: 100%;
+           background:aliceblue;
+       }
+        .MD_bottom_inner_div{
+            width:90%;
+            background: #dddddd;
+            height: 50px;
+            line-height: 50px;
+            /*内部小的div水平居中方式*/
+            margin: 10px auto;
+            border: 1px solid #cccccc;
+            border-radius: 5px;
+        }
+        .MD_left_img{
+            float: left;
+            margin-left: 10px;
+            margin-right: 20px;
+            margin-top: 15px;
+        }
+        .MD_right_img{
+            float: right;
+            margin-right: 10px;
+            margin-top: 15px;
+        }
+    </style>
+</head>
+<body>
+
+<header>我的小滴</header>
+<div class="MD_exteral_div">
+    <img class="MD_bg_img" src="Resources/banner5.png" alt="">
+    <div class="MD_inner_div">
+        <img class="MD_head_img" src="Resources/head.png" alt="">
+        <span id="M_username">华杉科技</span>
+        <script>
+            document.getElementById("M_username").innerHTML=window.localStorage.getItem("username");
+        </script>
+        <button onclick="outThere()" >退出登录</button>
+        <script>
+            function outThere() {
+                window.localStorage.removeItem("userName")
+                window.location.href="login.html";
+            }
+        </script>
+    </div>
+</div>
+    <div class="MD_bottom_div">
+        <div class="MD_bottom_inner_div">
+            <img class="MD_left_img" src="Resources/gr_1.png" alt="">
+            <span>我的客户</span>
+            <img class="MD_right_img" src=" Resources/jt.png" alt="">
+        </div>
+    </div>
+<div class="MD_bottom_div">
+    <div class="MD_bottom_inner_div">
+        <img class="MD_left_img" src="Resources/gr_1.png" alt="">
+        <span>我的客户</span>
+        <img class="MD_right_img" src=" Resources/jt.png" alt="">
+    </div>
+</div>
+<div class="MD_bottom_div">
+    <div class="MD_bottom_inner_div">
+        <img class="MD_left_img" src="Resources/gr_1.png" alt="">
+        <span>我的客户</span>
+        <img class="MD_right_img" src=" Resources/jt.png" alt="">
+    </div>
+</div>
+<div class="MD_bottom_div">
+    <div class="MD_bottom_inner_div">
+        <img class="MD_left_img" src="Resources/gr_1.png" alt="">
+        <span>我的客户</span>
+        <img class="MD_right_img" src=" Resources/jt.png" alt="">
+    </div>
+</div>
+<footer>
+    <a href="DropletService.html"><img src="Resources/nav10.png"><span>小滴服务</span></a>
+    <a href="EnterpriseProject.html"><img src="Resources/nav20.png"><span>企业项目</span></a>
+    <a href="ServiceProcess.html"><img src="Resources/nav30.png"><span>服务流程</span></a>
+    <a href="PlatformStyle.html"><img src="Resources/nav40.png"><span>平台风采</span></a>
+    <a href="MyLittleDrops.html"><img src="Resources/nav51.png"><span style="color: red">我的小滴</span></a>
+</footer>
+</body>
+</html>

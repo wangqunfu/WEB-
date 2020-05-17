@@ -1,0 +1,77 @@
+/*
+外部样式
+*/
+body{
+    background:rgb(244,244,246);
+    padding-top: 44px;
+    padding-bottom: 49px;
+}
+*{
+    margin: 0px;
+    padding: 0px;
+}
+/*定位：
+    1、确定元素的位置（x,y坐标）；
+    2、确定元素宽高；
+    3、加个螺丝钉；
+    4、把被遮挡的元素露出；
+*/
+header{
+    background: rgb(40,133,202);
+    text-align: center;
+    color: white;
+    line-height: 44px;
+    font-size: 18px;
+    left:0px;
+    top: 0px;
+    width: 100%;
+    position: fixed;
+    z-index: 999;
+}
+.DS_second_section img{
+    width: 100%;
+    margin-bottom: -6px;
+}
+/*针对 成行时针对外部大标签控制display：table，width：它的宽度值*/
+ul{
+    display:table;
+    width: 100%;
+    background: white;
+    height: 100px;
+    margin-bottom: 10px;
+}
+/*成列时，针对要成列（相对小标签）标签  display:table-cell;*/
+ul li{
+    display:table-cell;
+    width: 33.3%;
+    text-align: center;
+    vertical-align:middle;
+}
+ul li span{
+    display:block;
+}
+footer{
+    height: 49px;
+    display:table;
+    width: 100%;
+    background: black;
+    left:0px;
+    bottom: 0px;
+    position: fixed;
+}
+footer a{
+    display:table-cell;
+    width:20%;
+    text-align: center;
+    vertical-align:middle;
+    cursor:pointer;
+    text-decoration: none;
+}
+footer a span{
+    display:block;
+    color: white;
+    font-size: 12px;
+}
+footer img{
+    width: 20%;
+}

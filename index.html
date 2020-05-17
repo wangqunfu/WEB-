@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" name="viewport" content="width=device-width,initial-scale=1,user-scalable=no" >
+    <title>华杉科技（王群富)</title>
+    <link rel="short icon" href="Resources/icon.png">
+    <link rel="stylesheet" href="ExtenalStyle.css">
+    <script type="text/javascript" src="CommonClass.js"></script>
+    <style>
+        img{
+            width:100px;
+            height: auto;
+        }
+        .img{
+            padding-top:50px ;
+            width:100%;
+            text-align: center;
+            line-height: 200px;
+        }
+        div input{
+            width: 70%;
+            height: 50px;
+            outline:medium;
+            border: none;
+        }
+        .input_one{
+            margin-top: 20px;
+            margin-bottom:0px;
+            width: 90%;
+            line-height: 50px;
+            text-align: center;
+            border:1px solid #dddddd;
+            border-bottom: none;
+            margin: 0 auto;
+            background: white;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+        }
+        .input_two{
+            margin-top:0px;
+            width: 90%;
+            line-height: 50px;
+            text-align: center;
+            border:1px solid #dddddd;
+            margin: 0 auto;
+            background: white;
+            border-bottom-left-radius: 10px;
+            border-bottom-right-radius: 10px;
+        }
+        .input_btn{
+            text-align: center;
+            line-height: 50px;
+            width:90%;
+            margin-top: 20px;
+            margin-left: 5%;
+            margin-right: 5%;
+            background:blue;
+            border-radius: 15px;
+            font-size: 15px;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+<header>我的小滴</header>
+<div class="img">
+    <img src="Resources/head.png" alt="">
+</div>
+<form action="">
+        <div class="input_one">
+            <span>账号名:</span>
+            <input type="text" id="L_account"><br>
+        </div>
+        <div class="input_two">
+            <span>密码:</span>
+            <input type="password" id="L_pwd"><br>
+        </div>
+        <input class="input_btn" type="button"  value="登录" id="L_btn"><br>
+</form>
+<script>
+    var btn=document.querySelector("#L_btn");
+    btn.onclick=function ()
+    {
+        var userName=encodeURIComponent(document.querySelector("#L_account").value) ;
+        var password=encodeURIComponent(document.querySelector("#L_pwd").value) ;
+        var par3="username=" + userName + "&pwd=" + password;
+        requestMethod('post','login',par3,function (returnStr) {
+            if (returnStr == "登录成功") {
+                window.localStorage.setItem("userName",userName);//存储数据
+                location.href = "DropletService.html";
+            } else {
+                alert(returnStr);
+            }
+        });
+    }
+</script>
+</body>
+</html>
